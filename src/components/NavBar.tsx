@@ -1,35 +1,72 @@
-import { FunctionComponent } from "react";
+import { useScroll } from "@/lib/hooks/useScroll";
+import { Button } from "./ui/button";
 
-export type NavBarType = {
-  className?: string;
-};
+const NavBar = () => {
+  const { isVisible, isScrolling } = useScroll();
 
-const NavBar: FunctionComponent<NavBarType> = ({ className = "" }) => {
   return (
-    <div
-      className={`w-full md:container mx-auto relative bg-white border-gray-400 border-b-[1px] border-solid box-border h-[88px] overflow-hidden shrink-0 text-left text-base text-black font-general-sans-variable ${className}`}
+    <nav
+      className={`
+        fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm
+        transition-all duration-300 transform
+        ${isVisible ? "translate-y-0" : "-translate-y-full"}
+        ${isScrolling ? "shadow-md" : "shadow-none"}
+      `}
     >
-      
-        <div className="w-36 flex items-center justify-center gap-2 h-8 text-9xl-2 font-helvetica">
-          <img src="rectangle-196@2x.png" alt="" height={25} width={25} />
-          <b className=" tracking-[-2px] capitalize">
-           XenoPulse
+      <div className="flex items-center justify-around w-full h-16 max-w-7xl mx-auto px-4">
+        {/* Logo */}
+        <div className="flex items-center justify-center gap-2 h-8">
+          <img
+            src="rectangle-196@2x.png"
+            alt="XenoPulse logo"
+            height={20}
+            width={20}
+          />
+          <b className="text-[24px] tracking-[-2px] capitalize font-helvetica">
+            XenoPulse
           </b>
-          
         </div>
-        <div className="hidden md:flexself-stretch flex-1  flex-row items-center justify-center gap-10">
-          <div className="relative capitalize font-medium">How it Works</div>
-          <div className="relative capitalize font-medium">Our Work</div>
-          <div className="relative capitalize font-medium">Pricing</div>
-          <div className="relative capitalize font-medium">About Us</div>
+
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center justify-center gap-8">
+          <a
+            href="#how-it-works"
+            className="font-medium text-black text-lg no-underline hover:text-blue-500 transition-colors"
+          >
+            How it works
+          </a>
+          <a
+            href="#our-work"
+            className="font-medium text-black text-lg no-underline hover:text-blue-500 transition-colors"
+          >
+            Our work
+          </a>
+          <a
+            href="#pricing"
+            className="font-medium text-black text-lg no-underline hover:text-blue-500 transition-colors"
+          >
+            Pricing
+          </a>
+          <a
+            href="#about-us"
+            className="font-medium text-black text-lg no-underline hover:text-blue-500 transition-colors"
+          >
+            About us
+          </a>
         </div>
-        <div className="rounded-51xl bg-mediumslateblue-200 flex flex-row items-start justify-start py-4 px-6 text-white">
-          <div className="relative leading-[20px] capitalize font-medium">
-            Book a call
-          </div>
-        </div>
-      
-    </div>
+
+        {/* CTA Button */}
+        <Button className="bg-blue-500 rounded-2xl hover:bg-blue-600 transition-colors">
+          <a
+            href="https://x.com/xeno_pulse"
+            target="_blank"
+            className="text-white no-underline"
+          >
+            Contact us
+          </a>
+        </Button>
+      </div>
+    </nav>
   );
 };
 

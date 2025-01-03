@@ -10,7 +10,7 @@ import Bottom from "../components/Bottom";
 
 const LandingPage: FunctionComponent = () => {
   return (
-    <div className="relative bg-white w-full h-[6791px] overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
+    <div className="relative bg-white w-full  overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
       <NavBar />
       <HeroSection />
       <div className="w-[1468px] relative h-[1136px] overflow-hidden shrink-0 bg-[url('/public/partners@3x.png')] bg-cover bg-no-repeat bg-[top]">
@@ -52,18 +52,35 @@ const LandingPage: FunctionComponent = () => {
       <HowItWorks />
       <OurWork />
       <CTABanner />
-      <CTABanner1 />
+
       <Help />
       <Bottom />
-      <div className="w-[1468px] relative bg-black h-[119px] overflow-hidden shrink-0 text-sm text-white">
-        <div className="absolute top-[50px] left-[100px] leading-[20px] font-medium">
-          © 2022 Embrace, Inc. - All Rights Reserved
+      <footer className="w-full bg-black h-20 text-sm text-white">
+        <div className="container mx-auto h-full px-4">
+          <div className="h-full flex items-center justify-between">
+            {/* Copyright */}
+            <div className="font-medium">
+              © 2022 Embrace, Inc. - All Rights Reserved
+            </div>
+
+            {/* Links */}
+            <div className="flex gap-8 sm:gap-12 font-medium">
+              <a
+                href="/terms"
+                className="hover:text-gray-100 transition-colors text-white no-underline"
+              >
+                Terms of use
+              </a>
+              <a
+                href="/privacy"
+                className="hover:text-gray-100 transition-colors text-white no-underline"
+              >
+                Privacy policy
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="absolute top-[50px] left-[1043px] flex flex-row items-start justify-start gap-[125px]">
-          <div className="relative leading-[20px] font-medium whitespace-pre-wrap">{`Terms of use   `}</div>
-          <div className="relative leading-[20px] font-medium">{`Privacy policy `}</div>
-        </div>
-      </div>
+      </footer>
     </div>
   );
 };
