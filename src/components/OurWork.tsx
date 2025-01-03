@@ -17,16 +17,16 @@ export type OurWorkType = {
 };
 
 const images = [
-  "/rectangle-251@2x.png",
-  "/rectangle-252@2x.png",
-  "/rectangle-253@2x.png",
-  "/rectangle-254@2x.png",
-  "/rectangle-255@2x.png",
-  "/rectangle-256@2x.png",
-  "/rectangle-257@2x.png",
-  "/rectangle-258@2x.png",
-  "/rectangle-259@2x.png",
-  "/rectangle-260@2x.png",
+  "/reviews/1.png",
+  "/reviews/2.png",
+  "/reviews/3.png",
+  "/reviews/4.png",
+  "/reviews/5.png",
+  "/reviews/6.png",
+  "/reviews/7.png",
+  "/reviews/8.png",
+  "/reviews/9.png",
+  "/reviews/10.png",
 ];
 
 const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {

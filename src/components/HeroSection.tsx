@@ -9,45 +9,41 @@ const HeroSection: FunctionComponent<HeroSectionType> = ({
 }) => {
   return (
     <section
-      className={`w-full min-h-screen bg-white font-general-sans-variable ${className}`}
+      className={`w-full h-screen hero_bg font-general-sans-variable ${className}`}
     >
+      
       <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16">
           {/* Left Column */}
           <div className="space-y-8">
             {/* Main Heading */}
-            <h1 className="text-6xl md:text-7xl lg:text-[77px] leading-tight capitalize font-bagel-fat-one text-black">
+            <h1 className="text-6xl md:text-7xl lg:text-[77px] leading-tight capitalize font-bagel-fat-one text-white">
               We Take Care Of Your Project
             </h1>
 
             {/* Subheading */}
-            <p className="text-xl text-gray-500 font-medium max-w-lg">
+            <p className="text-[22px] text-gray-100 font-medium ">
               We care about our work and we care about our clients.
             </p>
 
             {/* Contact Form */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your Email"
-                className="flex-1 rounded-[18px] bg-gray-100 border border-gray-400 py-5 px-[18px] text-lg text-darkgray font-medium capitalize"
-              />
-              <button className="rounded-[51px] bg-mediumslateblue-200 text-white py-5 px-6 text-lg font-medium capitalize whitespace-nowrap">
-                Lets Talk
-              </button>
+            <div className="w-1/2 flex hero_gradient  h-[145px]  justify-center gap-3 rounded-r-xl rounded-l-full">
+              <img src="/profile.jpg" alt="" className="rounded-full size-36" />
+              <div className="flex-1 flex flex-col gap-1 ">
+                <h2 className="text-white text-sm">Hi, I’m Jack</h2>
+                <p className="text-[13px] text-white font-bold poppins-bold">
+                  Welcome to my portfolio! I specialize in Twitter promotion and
+                  marketing, helping projects like yours gain the visibility
+                  they deserve. With years of experience in amplifying digital
+                  presence, I’m here to transform your vision into a thriving
+                  reality. Let’s connect and discuss how we can elevate your
+                  project to new heights.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Right Column - Image */}
-          <div className="relative mt-8 lg:mt-0">
-            <img
-              src="/hero_img.png"
-              alt="Hero illustration"
-              className="lg:w-[400px]  xl:w-full h-auto object-cover "
-              width={450}
-              height={400}
-            />
-          </div>
         </div>
       </div>
     </section>
