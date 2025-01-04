@@ -2,15 +2,19 @@ import { useState, useEffect } from "react";
 
 export function useScroll() {
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const scrollingDown = currentScrollY > lastScrollY;
+
+      // Update isAtTop state
+      setIsAtTop(currentScrollY < 50);
 
       // Show navbar when scrolling up or when at the top
       if (!scrollingDown || currentScrollY < 50) {
@@ -41,5 +45,5 @@ export function useScroll() {
     };
   }, [lastScrollY]);
 
-  return { isVisible, isScrolling };
+  return { isVisible, isScrolling, isAtTop };
 }

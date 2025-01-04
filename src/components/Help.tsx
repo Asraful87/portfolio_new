@@ -1,84 +1,82 @@
-import { FunctionComponent } from "react";
-import QuestionItems from "./QuestionItems";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
+import { ChevronRight } from "lucide-react";
 
-export type HelpType = {
-  className?: string;
-};
+const faqItems = [
+  {
+    question: "How do I sign up for the project?",
+    answer:
+      "You can easily sign up through our online portal. The process takes less than 5 minutes to complete.",
+  },
+  {
+    question: "What should I prepare before starting?",
+    answer:
+      "Prepare your business goals, target audience information, and any existing marketing materials you'd like us to review.",
+  },
+  {
+    question: "Does my company need marketing advice?",
+    answer:
+      "If you're looking to grow your business and reach new customers, our expert marketing advice can help you achieve better results.",
+  },
+];
 
-const Help: FunctionComponent<HelpType> = ({ className = "" }) => {
+const Help = () => {
   return (
-    <div
-      className={`w-[1439px] relative h-[582px] overflow-hidden shrink-0 text-left text-xl text-black font-general-sans-variable ${className}`}
-    >
-      <div className="absolute top-[141px] left-[119px] w-[1200px] flex flex-row items-start justify-start gap-[120px]">
-        <div className="flex flex-col items-start justify-start">
-          <img
-            className="w-[616px] relative max-h-full"
-            alt=""
-            src="/vector-3.svg"
-          />
-          <QuestionItems howDoISignUpForTheProject="How do i sign up for the project?" />
-          <img
-            className="w-[616px] relative max-h-full"
-            alt=""
-            src="/vector-3.svg"
-          />
-          <QuestionItems
-            howDoISignUpForTheProject="What thing that i should prepare before starting?"
-            howDoIWidth="unset"
-          />
-          <img
-            className="w-[616px] relative max-h-full"
-            alt=""
-            src="/vector-3.svg"
-          />
-          <QuestionItems
-            howDoISignUpForTheProject="Does my company need help for marketing advices?"
-            howDoIWidth="unset"
-          />
-          <img
-            className="w-[616px] relative max-h-full"
-            alt=""
-            src="/vector-3.svg"
-          />
-        </div>
-        <div className="w-[464px] flex flex-col items-start justify-start gap-[42px] text-21xl">
-          <div className="self-stretch flex flex-col items-start justify-start gap-8">
-            <div className="flex flex-col items-start justify-start gap-4">
-              <div className="w-[487px] relative tracking-[-1px] leading-[52px] capitalize font-medium inline-block">
-                How we can help you?
-              </div>
-              <div className="w-[431px] relative text-xl leading-[36px] font-medium text-gray-500 inline-block opacity-[0.75] mix-blend-normal">
-                Follow our newsletter. We will regulary update our latest
-                project and availability.
-              </div>
-            </div>
-            <div className="self-stretch flex flex-row items-start justify-start gap-2 text-base text-darkgray">
-              <div className="flex-1 rounded-18xl bg-gray-100 flex flex-row items-center justify-start py-5 px-[18px]">
-                <div className="relative capitalize font-medium">
-                  Enter your Email
-                </div>
-              </div>
-              <div className="w-36 rounded-51xl bg-mediumslateblue-200 h-[62px] flex flex-row items-center justify-center py-5 px-6 box-border text-white">
-                <div className="relative leading-[20px] capitalize font-medium">
-                  Lets Talk
-                </div>
-              </div>
-            </div>
+    <section className="w-full py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row  gap-16 items-center justify-around">
+          {/* Left Column - FAQ Accordion */}
+          <div className="w-full max-w-xl max-h-[400px]">
+            {faqItems.map((item, index) => (
+              <Accordion key={index} type="single" collapsible>
+                <AccordionItem
+                  value={`item-${index}`}
+                  className="border-b border-gray-200"
+                >
+                  <AccordionTrigger className="text-lg ma py-4 hover:no-underline bg-transparent border-b border-b-[#E5E5E5] border-t ">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#D2691E] text-[18px] ">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            ))}
           </div>
-          <div className="w-[119.9px] relative h-6 text-xl text-mediumslateblue-200">
-            <div className="absolute top-[0px] left-[0px] [text-decoration:underline] leading-[24px] capitalize font-semibold inline-block w-[105px]">
-              more FAQ
+
+          {/* Right Column - Newsletter */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-[40px] font-medium tracking-tight">
+                How we can help you?
+              </h2>
+              <p className="text-lg text-gray-600">
+                Follow our newsletter. We will regularly update our latest
+                project and availability.
+              </p>
             </div>
-            <img
-              className="absolute h-[54.58%] w-[12.43%] top-[25%] right-[0%] bottom-[20.42%] left-[87.57%] max-w-full overflow-hidden max-h-full"
-              alt=""
-              src="/vector2.svg"
-            />
+
+            <div className="space-y-8">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input
+                  placeholder="Enter your email"
+                  className="h-12 bg-[#FAFAFA] text-gray-500 rounded-2xl"
+                />
+                <Button className="h-12 px-8 bg-blue-600 hover:bg-blue-700 rounded-full text-white">
+                  Let's Talk
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

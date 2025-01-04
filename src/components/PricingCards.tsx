@@ -1,25 +1,25 @@
-import { PricingCard } from './PricingCard';
+import { PricingCard } from "./PricingCard";
 
 const PricingCards: React.FC = () => {
   const starterFeatures = [
-    'Trending Dashboard',
-    '10 Keywords',
-    '100 Accounts Tracking',
-    '3 Users',
-    'Basic Support'
+    "Trending Dashboard",
+    "10 Keywords",
+    "100 Accounts Tracking",
+    "3 Users",
+    "Basic Support",
   ];
 
   const proFeatures = [
-    'Trending Dashboard',
-    '25 Keywords',
-    '250 Accounts Tracking',
-    '10 Users',
-    'Early Beta Features',
-    'Premium Support'
+    "Trending Dashboard",
+    "25 Keywords",
+    "250 Accounts Tracking",
+    "10 Users",
+    "Early Beta Features",
+    "Premium Support",
   ];
 
   return (
-    <div className="grid lg:grid-cols-2 px-8 gap-10 text-zinc-800 mt-10">
+    <div className="flex flex-col md:flex-row gap-3 text-zinc-800 mt-10">
       <PricingCard
         title="Starter"
         price="$29"
@@ -38,4 +38,3 @@ const PricingCards: React.FC = () => {
 };
 
 export default PricingCards;
-

@@ -52,8 +52,12 @@ const LandingPage: FunctionComponent = () => {
       </div>
       <HowItWorks />
       <OurWork />
-      <PricingSection/>
-     <img src="/banner.png" alt="Banner" className="w-full md:container mx-auto cover mt-7 rounded-lg" />
+      <PricingSection />
+      <img
+        src="/banner.png"
+        alt="Banner"
+        className="w-full md:container mx-auto cover mt-7 rounded-lg"
+      />
 
       <Help />
       <Bottom />
@@ -62,7 +66,7 @@ const LandingPage: FunctionComponent = () => {
           <div className="h-full flex items-center justify-between">
             {/* Copyright */}
             <div className="font-medium">
-              © 2022 Embrace, Inc. - All Rights Reserved
+              © 2025 Xeno Pulse, Inc. - All Rights Reserved
             </div>
 
             {/* Links */}

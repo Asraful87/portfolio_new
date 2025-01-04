@@ -11,7 +11,6 @@ const HeroSection: FunctionComponent<HeroSectionType> = ({
     <section
       className={`w-full h-screen hero_bg font-general-sans-variable ${className}`}
     >
-      
       <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16">
           {/* Left Column */}
@@ -31,7 +30,7 @@ const HeroSection: FunctionComponent<HeroSectionType> = ({
               <img src="/profile.jpg" alt="" className="rounded-full size-36" />
               <div className="flex-1 flex flex-col gap-1 ">
                 <h2 className="text-white text-sm">Hi, I’m Jack</h2>
-                <p className="text-[13px] text-white font-bold poppins-bold">
+                <p className="lg:text-[11px] xl:text-[12px] text-white font-bold poppins-bold">
                   Welcome to my portfolio! I specialize in Twitter promotion and
                   marketing, helping projects like yours gain the visibility
                   they deserve. With years of experience in amplifying digital
