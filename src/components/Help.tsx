@@ -12,7 +12,7 @@ const faqItems = [
   {
     question: "How do I sign up for the project?",
     answer:
-      "You can easily sign up through our online portal. The process takes less than 5 minutes to complete.",
+      "You can easily Contact us through our online portal. The process takes less than 1 minutes to complete.",
   },
   {
     question: "What should I prepare before starting?",
@@ -29,8 +29,8 @@ const faqItems = [
 const Help = () => {
   return (
     <section className="w-full py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row  gap-16 items-center justify-around">
+      <div className="container mx-sm px-4">
+        <div className="flex flex-col md:flex-row  gap-8 items-center justify-around">
           {/* Left Column - FAQ Accordion */}
           <div className="w-full max-w-xl max-h-[400px]">
             {faqItems.map((item, index) => (

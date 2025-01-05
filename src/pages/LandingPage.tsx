@@ -11,7 +11,7 @@ import PricingSection from "@/components/PricingSection";
 
 const LandingPage: FunctionComponent = () => {
   return (
-    <div className="relative bg-white w-full  overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
+    <div className="scroll-smooth relative bg-white w-full  overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
       <NavBar />
       <HeroSection />
       <div className="w-[1468px] relative h-[1136px] overflow-hidden shrink-0 bg-[url('/partners@3x.png')] bg-cover bg-no-repeat bg-[top]">
@@ -34,12 +34,7 @@ const LandingPage: FunctionComponent = () => {
             <span className="capitalize">b</span>rands trust us
           </div>
         </div>
-        <div className="absolute top-[289px] left-[425px] flex flex-col items-start justify-start">
-          <div className="relative capitalize font-semibold">24+</div>
-          <div className="w-[169px] relative text-base leading-[24px] capitalize font-medium text-gray-500 inline-block">
-            Worldwide awards
-          </div>
-        </div>
+        
         <div className="absolute top-[137px] left-[730px] flex flex-col items-start justify-start gap-5 text-black">
           <div className="w-[502px] relative tracking-[-1px] capitalize font-medium inline-block">
             commitments
