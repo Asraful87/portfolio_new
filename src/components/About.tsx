@@ -12,7 +12,7 @@ const About = () => {
       scrollTrigger: {
         trigger: "#clip",
         start: "center center",
-        end: "+=800 center",
+        end: "+=100 center",
         scrub: 0.5,
         pin: true,
         pinSpacing: true,
@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div>
-        <h2>Analytics</h2>
+      <div className="w-full text-center capitalize font-medium gap-4">Here is page statistics:</div>
       </div>
 
       <div className="h-dvh w-screen" id="clip">

@@ -28,7 +28,7 @@ const faqItems = [
 
 const Help = () => {
   return (
-    <section className="w-full py-16 md:py-24">
+    <section className="w-full ">
       <div className="container mx-sm px-4">
         <div className="flex flex-col md:flex-row  gap-8 items-center justify-around">
           {/* Left Column - FAQ Accordion */}
@@ -39,7 +39,7 @@ const Help = () => {
                   value={`item-${index}`}
                   className="border-b border-gray-200"
                 >
-                  <AccordionTrigger className="text-lg ma py-4 hover:no-underline bg-transparent border-b border-b-[#E5E5E5] border-t ">
+                  <AccordionTrigger className="text-lg ma py-4 w-full hover:no-underline bg-transparent border-b border-b-[#E5E5E5] border-t ">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-[#D2691E] text-[18px] ">
@@ -51,8 +51,8 @@ const Help = () => {
           </div>
 
           {/* Right Column - Newsletter */}
-          <div className="space-y-8">
-            <div className="space-y-4">
+          <div className="w-full max-w-md">
+            <div className="">
               <h2 className="text-2xl md:text-[40px] font-medium tracking-tight">
                 How we can help you?
               </h2>

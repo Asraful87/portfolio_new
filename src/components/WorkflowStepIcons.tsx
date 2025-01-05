@@ -35,7 +35,7 @@ const WorkflowStepIcons: FunctionComponent<WorkflowStepIconsType> = ({
     >
       <div className="rounded-3xl bg-mediumslateblue-200 flex flex-row items-center justify-center p-[30px]">
         <img
-          className="w-[46px] relative h-[46px] overflow-hidden shrink-0"
+          className="size-[30px] md:size-[40px] lg:size-[46px] relative overflow-hidden shrink-0"
           alt=""
           src={heroiconsSolidlightningBolt}
         />
