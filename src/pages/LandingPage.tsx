@@ -8,15 +8,14 @@ import CTABanner1 from "../components/CTABanner1";
 import Help from "../components/Help";
 import Bottom from "../components/Bottom";
 import PricingSection from "@/components/PricingSection";
+import About from "@/components/About";
 
 const LandingPage: FunctionComponent = () => {
   return (
     <div className="scroll-smooth relative bg-white w-full  overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
       <NavBar />
       <HeroSection />
-      <div className="w-[1468px] relative h-[1136px] overflow-hidden shrink-0 bg-[url('/partners@3x.png')] bg-cover bg-no-repeat bg-[top]">
-        <div className="absolute top-[369px] left-[120px] w-[1200px] h-12" />
-      </div>
+      <About />
       <div className="w-[1440px] relative h-[536px] overflow-hidden shrink-0">
         <div className="absolute top-[137px] left-[121px] flex flex-col items-start justify-start">
           <div className="relative capitalize font-semibold">245%</div>
