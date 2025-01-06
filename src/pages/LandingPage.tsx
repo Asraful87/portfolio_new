@@ -9,6 +9,7 @@ import Help from "../components/Help";
 import Bottom from "../components/Bottom";
 import PricingSection from "@/components/PricingSection";
 import About from "@/components/About";
+import Statatics from "@/components/Statatics";
 
 const LandingPage: FunctionComponent = () => {
   return (
@@ -16,39 +17,7 @@ const LandingPage: FunctionComponent = () => {
       <NavBar />
       <HeroSection />
       <About />
-      <div className="w-[1440px] relative h-[536px] overflow-hidden shrink-0">
-        <div className="absolute top-[137px] left-[121px] flex flex-col items-start justify-start">
-          <div className="relative capitalize font-semibold">245%</div>
-          <div className="w-[215px] relative text-base leading-[24px] font-medium text-gray-500 inline-block">
-            More revenues for the brand
-          </div>
-        </div>
-        <div className="absolute top-[138px] left-[425px] flex flex-col items-start justify-start">
-          <div className="relative capitalize font-semibold">130K+</div>
-          <div className="w-[155px] relative text-base leading-[24px] font-medium text-gray-500 inline-block">{`Audiences reached `}</div>
-        </div>
-        <div className="absolute top-[289px] left-[121px] flex flex-col items-start justify-start">
-          <div className="relative capitalize font-semibold">50+</div>
-          <div className="w-[155px] relative text-base leading-[24px] font-medium text-gray-500 inline-block">
-            <span className="capitalize">b</span>rands trust us
-          </div>
-        </div>
-        <div className="absolute top-[289px] left-[425px] flex flex-col items-start justify-start">
-          <div className="relative capitalize font-semibold">24+</div>
-          <div className="w-[169px] relative text-base leading-[24px] capitalize font-medium text-gray-500 inline-block">
-            Worldwide awards
-          </div>
-        </div>
-        <div className="absolute top-[137px] left-[730px] flex flex-col items-start justify-start gap-5 text-black">
-          <div className="w-[502px] relative tracking-[-1px] capitalize font-medium inline-block">
-            commitments
-          </div>
-          <div className="w-[576px] relative text-lg leading-[32px] font-medium text-gray-500 inline-block">
-            We are committed to working with you collaboratively to understand
-            your goals and create a strategy that will achieve them.
-          </div>
-        </div>
-      </div>
+      <Statatics />
       <HowItWorks />
       <OurWork />
       <PricingSection />
