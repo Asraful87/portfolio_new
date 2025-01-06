@@ -31,6 +31,13 @@ const PricingCards: React.FC = () => {
         features={proFeatures}
         isPro
       />
+      <PricingCard
+        title="Ambassador"
+        price="$100 Monthly"
+        description="For agencies and businesses"
+        features={proFeatures}
+        isPro
+        ></PricingCard>
     </div>
   );
 };
