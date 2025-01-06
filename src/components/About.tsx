@@ -29,7 +29,11 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div>
-      <div className="w-full text-center capitalize font-medium gap-4">Here is page statistics:</div>
+      <div className="w-full text-center capitalize font-bold gap-4 text-[25px]">Here is page statistics:</div>
+      <div className="w-full text-center capitalize font-sans gap-4 text-[17px]">
+  Here is Page Statistics: Our page is created to provide a valuable and engaging experience for our visitors. The data shows that we're achieving this goal,<br /> with a growing number of daily active users and a low bounce rate. This indicates that visitors are finding our content relevant and are exploring our website further.<br /> We're committed to continually improving our page to better serve our clients.
+</div>
+
       </div>
 
       <div className="h-dvh w-screen" id="clip">

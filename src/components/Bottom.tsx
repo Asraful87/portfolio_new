@@ -24,20 +24,16 @@ const Bottom = () => {
         </b>
       </div>
       <div className="flex item-center justify-center gap-7">
-        <a href="/" target="_blank" className="">
+        <a href="https://discordapp.com/users/1069136797281558609npm" target="_blank" className="">
         <SiDiscord className="size-10 text-black"/>
         </a>
-        <a href="/" target="_blank" className="">
+        <a href="https://www.facebook.com/asraful.871" target="_blank" className="">
         <FaSquareFacebook className="size-10  text-black hover:scale-[1.1] transition"/>
         </a>
-
-        <a href="/" target="_blank" className="">
-        <FaSquareInstagram className="size-10 text-black"/>
-        </a>
-        <a href="/" target="_blank" className="">
+        <a href="https://t.me/Xeno_Pulse" target="_blank" className="">
         <FaTelegramPlane className="size-10 text-black"/>
         </a>
-        <a href="/" target="_blank" className="">
+        <a href="https://x.com/xeno_pulse?t=Vk_IT_0zeyBsZdzJrLqV9Q&s=09" target="_blank" className="">
         <FaSquareXTwitter className="size-10 text-black"/>
         </a>
       </div>
