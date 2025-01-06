@@ -16,7 +16,7 @@ const LandingPage: FunctionComponent = () => {
       <NavBar />
       <HeroSection />
       <About />
-     <Statitistic />
+      <Statitistic />
       <HowItWorks />
       <OurWork />
       <PricingSection />

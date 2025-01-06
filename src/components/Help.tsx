@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/accordion";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import { ChevronRight } from "lucide-react";
 
 const faqItems = [
   {
@@ -32,22 +31,23 @@ const Help = () => {
       <div className="container mx-sm px-4">
         <div className="flex flex-col md:flex-row  gap-8 items-center justify-around">
           {/* Left Column - FAQ Accordion */}
-          <div className="w-full max-w-xl max-h-[400px]">
-            {faqItems.map((item, index) => (
-              <Accordion key={index} type="single" collapsible>
+          <div className="w-full max-w-xl">
+            <Accordion type="single" collapsible className="w-full">
+              {faqItems.map((item, index) => (
                 <AccordionItem
+                  key={index}
                   value={`item-${index}`}
-                  className="border-b border-gray-200"
+                  className="border-b border-gray-200 py-0"
                 >
                   <AccordionTrigger className="text-lg ma py-4 w-full hover:no-underline bg-transparent border-b border-b-[#E5E5E5] border-t ">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#D2691E] text-[18px] ">
+                  <AccordionContent className="text-[#D2691E] text-[18px] pb-2">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
-              </Accordion>
-            ))}
+              ))}
+            </Accordion>
           </div>
 
           {/* Right Column - Newsletter */}
