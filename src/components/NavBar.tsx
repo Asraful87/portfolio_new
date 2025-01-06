@@ -1,5 +1,6 @@
 import { useScroll } from "@/lib/hooks/useScroll";
 import { Button } from "./ui/button";
+import SparkleButton from "./SparkleButton";
 
 const NavBar = () => {
   const { isVisible, isScrolling, isAtTop } = useScroll();
@@ -95,15 +96,15 @@ const NavBar = () => {
         </div>
 
         {/* CTA Button - Keeping original styling */}
-        <Button className="bg-blue-500 rounded-2xl hover:bg-blue-600 transition-colors">
+        
           <a
             href="https://x.com/xeno_pulse"
             target="_blank"
             className="text-white no-underline"
           >
-            Contact us
+            <SparkleButton>Contact us</SparkleButton>
           </a>
-        </Button>
+      
       </div>
     </nav>
   );

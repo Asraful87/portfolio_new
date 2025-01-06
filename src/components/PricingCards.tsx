@@ -3,18 +3,16 @@ import { PricingCard } from "./PricingCard";
 const PricingCards: React.FC = () => {
   const starterFeatures = [
     "Trending Dashboard",
-    "10 Keywords",
-    "100 Accounts Tracking",
-    "3 Users",
+    "Up to 5 Hundreed Active user",
+    " Upcoming 5 Tweet Supoort",
     "Basic Support",
   ];
 
   const proFeatures = [
     "Trending Dashboard",
-    "25 Keywords",
-    "250 Accounts Tracking",
-    "10 Users",
-    "Early Beta Features",
+    "Up to 7 Hundreed Active user",
+   " Upcoming Any Tweet Supoort Like + RT",
+    "24/7 Help Center & Support For Your Any Question",
     "Premium Support",
   ];
 
@@ -28,7 +26,7 @@ const PricingCards: React.FC = () => {
       />
       <PricingCard
         title="Pro"
-        price="$79"
+        price="$49"
         description="For agencies and businesses"
         features={proFeatures}
         isPro

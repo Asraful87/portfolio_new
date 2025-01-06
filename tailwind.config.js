@@ -141,6 +141,7 @@ module.exports = {
   		'5xl': '24px',
   		base: '16px',
   		xl: '20px',
+		'2xl': '24px',
   		'21xl': '40px',
   		'37xl': '56px',
   		'45xl': '64px',

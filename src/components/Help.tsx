@@ -11,7 +11,7 @@ const faqItems = [
   {
     question: "How do I sign up for the project?",
     answer:
-      "You can easily sign up through our online portal. The process takes less than 5 minutes to complete.",
+      "You can easily Contact us through our online portal. The process takes less than 1 minutes to complete.",
   },
   {
     question: "What should I prepare before starting?",
@@ -27,9 +27,9 @@ const faqItems = [
 
 const Help = () => {
   return (
-    <section className="w-full py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-16 items-center justify-around">
+    <section className="w-full ">
+      <div className="container mx-sm px-4">
+        <div className="flex flex-col md:flex-row  gap-8 items-center justify-around">
           {/* Left Column - FAQ Accordion */}
           <div className="w-full max-w-xl">
             <Accordion type="single" collapsible className="w-full">
@@ -39,7 +39,7 @@ const Help = () => {
                   value={`item-${index}`}
                   className="border-b border-gray-200 py-0"
                 >
-                  <AccordionTrigger className="text-lg py-2 hover:no-underline bg-transparent">
+                  <AccordionTrigger className="text-lg ma py-4 w-full hover:no-underline bg-transparent border-b border-b-[#E5E5E5] border-t ">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-[#D2691E] text-[18px] pb-2">
@@ -51,8 +51,8 @@ const Help = () => {
           </div>
 
           {/* Right Column - Newsletter */}
-          <div className="space-y-8">
-            <div className="space-y-4">
+          <div className="w-full max-w-md">
+            <div className="">
               <h2 className="text-2xl md:text-[40px] font-medium tracking-tight">
                 How we can help you?
               </h2>

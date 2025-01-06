@@ -3,21 +3,20 @@ import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
 import OurWork from "../components/OurWork";
-import CTABanner from "../components/CTABanner";
-import CTABanner1 from "../components/CTABanner1";
+
 import Help from "../components/Help";
 import Bottom from "../components/Bottom";
 import PricingSection from "@/components/PricingSection";
 import About from "@/components/About";
-import Statatics from "@/components/Statatics";
+import Statitistic from "@/components/Statitistic";
 
 const LandingPage: FunctionComponent = () => {
   return (
-    <div className="relative bg-white w-full  overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
+    <div className="scroll-smooth relative bg-white w-screen  overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
       <NavBar />
       <HeroSection />
       <About />
-      <Statatics />
+      <Statitistic />
       <HowItWorks />
       <OurWork />
       <PricingSection />
