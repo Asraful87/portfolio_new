@@ -33,8 +33,10 @@ const HeroSection: FunctionComponent<HeroSectionType> = ({
                 className="rounded-full w-24 h-24 md:w-36 md:h-36 flex-shrink-0"
               />
               <div className="flex-1 flex flex-col gap-2 md:gap-1 text-center md:text-left px-2 md:pr-4">
-                <h2 className="text-white text-lg md:text-sm">Hi, I'm Jack</h2>
-                <p className="text-sm md:text-[11px] lg:text-[11px] xl:text-[12px] text-white font-bold poppins-bold">
+                <h2 className="text-black md:text-white text-lg md:text-sm">
+                  Hi, I'm Jack
+                </h2>
+                <p className="text-sm md:text-[11px] lg:text-[11px] xl:text-[12px] text-black md:text-white font-bold poppins-bold">
                   Welcome to my portfolio! I specialize in Twitter promotion and
                   marketing, helping projects like yours gain the visibility
                   they deserve. With years of experience in amplifying digital

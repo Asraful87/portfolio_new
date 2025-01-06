@@ -27,16 +27,31 @@ const About = () => {
   });
 
   return (
-    <div id="about" className="min-h-screen w-screen">
+    <div id="about" className="min-h-screen w-screen mt-6">
       <div>
-      <div className="w-full text-center capitalize font-bold gap-4 text-[25px]">Here is page statistics:</div>
-      <div className="w-full text-center capitalize font-sans gap-4 text-[17px]">
-  Here is Page Statistics: Our page is created to provide a valuable and engaging experience for our visitors. The data shows that we're achieving this goal,<br /> with a growing number of daily active users and a low bounce rate. This indicates that visitors are finding our content relevant and are exploring our website further.<br /> We're committed to continually improving our page to better serve our clients.
-</div>
-
+        <div className="w-full text-center capitalize font-bold gap-4 text-[30px] md:text-[45px]">
+          Here is page statistics
+        </div>
+        <div className="w-full  text-center capitalize josefin-sans gap-4 text-[14px] md:text-[17px]">
+          <p>
+            Here is Page Statistics: Our page is created to provide a valuable
+            and engaging experience for our visitors. The data shows that we're
+            achieving this goal, with a growing number of daily active users and
+            a low bounce rate. This indicates that visitors are finding our
+            content relevant and are exploring our website further. We're
+            committed to continually improving our page to better serve our
+            clients.
+          </p>
+        </div>
       </div>
-
-      <div className="h-dvh w-screen" id="clip">
+      <div className="mt-4">
+        <img
+          src="/partners@3x.png"
+          alt=""
+          className="w-full h-auto object-cover"
+        />
+      </div>
+      {/* <div className="h-dvh w-screen mt-3" id="clip">
         <div className="mask-clip-path about-image">
           <img
             src="/partners@3x.png"
@@ -44,7 +59,7 @@ const About = () => {
             className="absolute left-0 top-0 size-full object-bottom  object-cover"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

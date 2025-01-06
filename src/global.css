@@ -105,20 +105,29 @@ body {
   font-style: normal;
 }
 
-.hero_bg {
-  background-image: url("/hero_bg.jpeg"); /* Replace with the actual path to your image */
-  background-size: cover; /* Ensures the image covers the entire hero section */
-  background-position: center; /* Centers the image in the hero section */
-  background-repeat: no-repeat;
-}
-.hero_gradient {
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+@media screen and (min-width: 1200px) {
+  .hero_bg {
+    background-image: url("/hero_bg.jpeg"); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensures the image covers the entire hero section */
+    background-position: center; /* Centers the image in the hero section */
+    background-repeat: no-repeat;
+  }
+  .hero_gradient {
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  }
 }
 
 .font-playwrite {
   font-family: "Playwrite IS", serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+}
+
+.josefin-sans {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   font-style: normal;
 }
