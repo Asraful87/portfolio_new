@@ -13,7 +13,7 @@ const SparkleButton = ({
     <button
       className={`
         group
-        relative flex items-center gap-2 px-8 py-4
+        relative flex items-center gap-2 px-4 md:px-8 py-2 md:py-4
         cursor-pointer bg-transparent border-none rounded-full
         transform origin-center transition-transform duration-300 ease-in-out
         hover:scale-110 active:scale-100

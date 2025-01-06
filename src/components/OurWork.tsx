@@ -41,7 +41,7 @@ const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
         A glimpse of our portfolio
       </div>
 
-      <div className="flex w-full items-center flex-wrap gap-3 ">
+      <div className="flex w-full items-center justify-center md:justify-start flex-wrap gap-2 md:gap-3 ">
         {images.map((item, index) => (
           <button
             key={index}
@@ -54,7 +54,7 @@ const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
                   <img
                     src={item}
                     alt={`Portfolio item ${index + 1}`}
-                    className="w-[200px] h-[300px] object-cover rounded-lg hover:scale-105 transition"
+                    className="w-[180px] md:w-[200px] h-[300px] object-cover rounded-lg hover:scale-105 transition"
                   />
                 </TooltipTrigger>
                 <TooltipContent className="h-7 my-4">

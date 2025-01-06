@@ -18,11 +18,13 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   isPro = false,
 }) => {
   const containerClasses = isPro
-    ? "flex flex-col items-center bg-gradient-to-br from-blue-100 via-orange-100 to-purple-100 p-1 rounded-lg shadow-lg relative border-8 border-orange-200 w-[400px]"
-    : "flex flex-col items-center p-1 bg-slate-100  rounded-lg shadow-lg w-[400px]";
+    ? "flex flex-col items-center bg-gradient-to-br from-blue-100 via-orange-100 to-purple-100 p-1 rounded-lg shadow-lg relative border-8 border-orange-200 w-[360px] md:w-[400px]"
+    : "flex flex-col items-center p-1 bg-slate-100  rounded-lg shadow-lg w-[360px]  md:w-[400px]";
 
   return (
-    <div className={containerClasses}>
+    <div
+      className={`${containerClasses} min-h-[500px] flex flex-col items-center justify-center gap-4`}
+    >
       {isPro && (
         <>
           <FireIcon />
