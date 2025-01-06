@@ -44,7 +44,7 @@ const HowItWorks: FunctionComponent<HowItWorksType> = ({ className = "" }) => {
             <img
               className="rounded-3xl w-full max-w-[800px] object-cover mt-8"
               alt="How it works illustration"
-              src="/rectangle-160@2x.png"
+              src="/race.jpeg"
             />
           </div>
           <div className="flex flex-col gap-8 ">
