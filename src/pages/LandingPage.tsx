@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useRef } from "react";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
@@ -11,9 +11,10 @@ import About from "@/components/About";
 import Statitistic from "@/components/Statitistic";
 
 const LandingPage: FunctionComponent = () => {
+  
   return (
     <div className="scroll-smooth relative bg-white w-screen  overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
-      <NavBar />
+      <NavBar/>
       <HeroSection />
       <About />
       <Statitistic />

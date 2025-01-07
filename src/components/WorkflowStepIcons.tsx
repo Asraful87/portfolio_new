@@ -31,11 +31,11 @@ const WorkflowStepIcons: FunctionComponent<WorkflowStepIconsType> = ({
 
   return (
     <div
-      className={`w-[590px] flex flex-row items-center justify-center gap-8 text-left text-13xl text-black font-general-sans-variable ${className}`}
+      className={`w-[calc(100%-20px)] md:w-[590px] flex flex-row items-center justify-center gap-8 text-left text-13xl text-black font-general-sans-variable ${className}`}
     >
       <div className="rounded-3xl bg-mediumslateblue-200 flex flex-row items-center justify-center p-[30px]">
         <img
-          className="size-[30px] md:size-[40px] lg:size-[46px] relative overflow-hidden shrink-0"
+          className="size-[17px] md:size-[40px] lg:size-[46px] relative overflow-hidden shrink-0"
           alt=""
           src={heroiconsSolidlightningBolt}
         />

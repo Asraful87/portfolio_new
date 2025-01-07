@@ -27,7 +27,7 @@ const faqItems = [
 
 const Help = () => {
   return (
-    <section className="container mx-auto pr-4   flex flex-col md:flex-row items-center justify-around gap-4 min-h-screen ">
+    <section className="container mx-auto pr-4   flex flex-col md:flex-row items-center justify-around gap-4 md:min-h-screen ">
       {/* Left Column - FAQ Accordion */}
       <div className="w-[360px]md:w-full max-w-xl flex flex-col gap-3">
         <Accordion type="single" collapsible className="w-full">
@@ -40,7 +40,7 @@ const Help = () => {
               <AccordionTrigger className="text-lg ma py-4 w-[340px] md:w-full hover:no-underline bg-transparent border-b border-b-[#E5E5E5] border-t my-4">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-[#D2691E] text-[18px] pb-2">
+              <AccordionContent className="text-[#D2691E] text-[14px] pb-2 py-4 w-[340px] md:w-full font-medium">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
@@ -49,19 +49,19 @@ const Help = () => {
       </div>
 
       {/* Right Column - Newsletter */}
-      <div className="w-full max-w-md flex flex-col gap-8">
+      <div className="w-full max-w-md flex flex-col gap-8 mt-14">
         <div className="">
           <h2 className="text-2xl md:text-[40px] font-medium tracking-tight">
             How we can help you?
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-[14px] md:text-lg text-gray-600 mt-3">
             Follow our newsletter. We will regularly update our latest project
             and availability.
           </p>
         </div>
 
         <div className="space-y-8">
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex fflex-row gap-3">
             <Input
               placeholder="Enter your email"
               className="h-12 bg-[#FAFAFA] text-gray-500 rounded-2xl"

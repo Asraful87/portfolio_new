@@ -29,7 +29,7 @@ const workflowSteps = [
 
 const HowItWorks: FunctionComponent<HowItWorksType> = ({ className = "" }) => {
   return (
-    <div className={`w-full px-[10px] md:container mx-auto min-h-screen  flex flex-col md:flex-row items-center justify-around gap-6  font-general-sans-variable ${className}`}>
+    <div id="how-it-works" className={`w-full px-[10px] md:container mx-auto min-h-screen  flex flex-col md:flex-row items-center justify-around gap-6  font-general-sans-variable ${className}`}>
       
         
           <div className="flex flex-col gap-2 h-full w-full">
@@ -42,7 +42,7 @@ const HowItWorks: FunctionComponent<HowItWorksType> = ({ className = "" }) => {
               challenges.
             </p>
             <img
-              className="rounded-3xl w-full max-w-[800px] object-cover mt-8"
+              className="rounded-3xl w-[calc(100%-20px)] max-w-[800px] object-cover mt-8"
               alt="How it works illustration"
               src="/race.jpeg"
             />

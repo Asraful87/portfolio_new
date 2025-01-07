@@ -1,6 +1,15 @@
 import { useScroll } from "@/lib/hooks/useScroll";
 import { Button } from "./ui/button";
 import SparkleButton from "./SparkleButton";
+import { IoReorderThreeOutline } from "react-icons/io5";
+import CustomNavItem from "./CustomNavItem";
+const links = [
+  { id: "statistics", name: "Statistics" },
+  { id: "how-it-works", name: "How it works" },
+  { id: "our-work", name: "Our work" },
+  { id: "pricing", name: "Pricing" }
+];
+
 
 const NavBar = () => {
   const { isVisible, isScrolling, isAtTop } = useScroll();
@@ -13,11 +22,12 @@ const NavBar = () => {
         transition-all duration-300 transform
         ${isVisible ? "translate-y-0" : "-translate-y-full"}
         ${isScrolling && !isAtTop ? "shadow-md" : "shadow-none"}
+        
       `}
     >
-      <div className="flex items-center justify-around w-full h-20 max-w-7xl mx-auto px-4">
+      <div className="flex items-center justify-around w-full h-20 max-w-7xl mx-auto px-4 relative">
         {/* Logo */}
-        <div className="flex items-center justify-center gap-2 h-8">
+        <a href="/" className="flex items-center justify-center gap-2 h-8 no-underline">
           <img
             src="rectangle-196@2x.png"
             alt="XenoPulse logo"
@@ -33,12 +43,14 @@ const NavBar = () => {
           >
             XenoPulse
           </b>
-        </div>
+        </a>
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center justify-center gap-8">
-          <a
-            href="#how-it-works"
+          
+          {links.map((link) => (
+            <a
+            href={`#${link.id}`}
             className={`
               font-medium text-lg no-underline
               ${
@@ -49,61 +61,23 @@ const NavBar = () => {
               transition-colors duration-300
             `}
           >
-            How it works
+            {link.name}
           </a>
-          <a
-            href="#our-work"
-            className={`
-              font-medium text-lg no-underline
-              ${
-                isAtTop
-                  ? "text-white hover:text-gray-200"
-                  : "text-black hover:text-blue-500"
-              }
-              transition-colors duration-300
-            `}
-          >
-            Our work
-          </a>
-          <a
-            href="#pricing"
-            className={`
-              font-medium text-lg no-underline
-              ${
-                isAtTop
-                  ? "text-white hover:text-gray-200"
-                  : "text-black hover:text-blue-500"
-              }
-              transition-colors duration-300
-            `}
-          >
-            Pricing
-          </a>
-          <a
-            href="#about-us"
-            className={`
-              font-medium text-lg no-underline
-              ${
-                isAtTop
-                  ? "text-white hover:text-gray-200"
-                  : "text-black hover:text-blue-500"
-              }
-              transition-colors duration-300
-            `}
-          >
-            About us
-          </a>
+          ))}
         </div>
 
         {/* CTA Button - Keeping original styling */}
         
-          <a
+         <div className="flex items-center gap-3">
+         <a
             href="https://x.com/xeno_pulse"
             target="_blank"
             className="text-white no-underline"
           >
             <SparkleButton>Contact us</SparkleButton>
           </a>
+          <CustomNavItem/>
+         </div>
       
       </div>
     </nav>

@@ -89,32 +89,14 @@ const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
     };
   }, [handleKeyDown]);
 
-  const handleSeeMore = useCallback(() => {
-    if (visibleImages < images.length) {
-      const nextImage = visibleImages;
-      setVisibleImages(nextImage + 1);
-
-      setTimeout(() => {
-        const container = scrollContainerRef.current;
-        if (container) {
-          const newImageElement = container.children[nextImage] as HTMLElement;
-          if (newImageElement) {
-            newImageElement.scrollIntoView({
-              behavior: "smooth",
-              block: "nearest",
-              inline: "start",
-            });
-          }
-        }
-      }, 100);
-    }
-  }, [visibleImages]);
+ 
 
   return (
     <div
-      className={`w-full md:container mx-auto relative overflow-hidden shrink-0 text-left text-45xl text-black font-general-sans-variable ${className}`}
+    id="our-work"
+      className={`w-full md:container mx-auto relative overflow-hidden shrink-0 text-left text-45xl text-black font-general-sans-variable ${className} mt-10`}
     >
-      <h2 className="w-full text-center capitalize font-medium text-[52px] mb-2">
+      <h2 className="w-full text-center capitalize font-medium text-[52px] ">
         Our Work
       </h2>
       <p className="w-full text-lg leading-[32px] font-medium text-gray-500 text-center inline-block mb-8">
@@ -125,7 +107,7 @@ const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
         ref={scrollContainerRef}
         className="flex w-full items-start justify-start flex-nowrap gap-6 overflow-x-auto pb-4 snap-x snap-mandatory"
       >
-        {images.slice(0, visibleImages).map((item, index) => (
+        {images.map((item, index) => (
           <div
             key={index}
             className="flex flex-col items-center w-[200px] flex-shrink-0 snap-start"
@@ -156,13 +138,7 @@ const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
         ))}
       </div>
 
-      {visibleImages < images.length && (
-        <div className="w-full flex justify-center mt-7">
-          <Button onClick={handleSeeMore} variant="outline">
-            See More
-          </Button>
-        </div>
-      )}
+      
 
       <Dialog
         open={selectedImageIndex !== null}
@@ -179,16 +155,8 @@ const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
                   className="w-full h-full object-contain rounded-lg"
                   style={{ maxHeight: "90vh" }}
                 />
-                <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white p-2 rounded text-lg font-medium">
-                  {images[selectedImageIndex].title}
-                </div>
-                <button
-                  onClick={() => setSelectedImageIndex(null)}
-                  className="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                  aria-label="Close dialog"
-                >
-                  <X size={24} />
-                </button>
+                
+                
                 <button
                   onClick={handlePrevious}
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/70 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"

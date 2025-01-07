@@ -3,10 +3,14 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
 import AnimatedTitle from "./AnimatedTitle";
+import { Dialog, DialogContent, DialogOverlay, DialogPortal } from "./ui/dialog";
+import { ChevronLeft } from "lucide-react";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const [open, setopen] = useState(false)
   useGSAP(() => {
     const clipAnimation = gsap.timeline({
       scrollTrigger: {
@@ -27,14 +31,15 @@ const About = () => {
   });
 
   return (
-    <div id="about" className="min-h-screen w-screen mt-6">
+    <>
+    <div id="statistics" className="md:min-h-screen w-screen mt-6">
       <div>
         <div className="w-full text-center capitalize font-bold gap-4 text-[30px] md:text-[45px]">
-          Here is page statistics
+          Here is page statistics:
         </div>
-        <div className="w-full  text-center capitalize josefin-sans gap-4 text-[14px] md:text-[17px]">
+        <div className="w-full container mx-auto  text-center capitalize josefin-sans gap-4 text-[16px] md:text-[17px] bebas-neue-regular pr-4 leading-6 md:pr-0 mt-4">
           <p>
-            Here is Page Statistics: Our page is created to provide a valuable
+            Our page is created to provide a valuable
             and engaging experience for our visitors. The data shows that we're
             achieving this goal, with a growing number of daily active users and
             a low bounce rate. This indicates that visitors are finding our
@@ -44,11 +49,12 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-8">
         <img
           src="/partners@3x.png"
           alt=""
           className="w-full h-auto object-cover"
+          onClick={() => setopen(true)}
         />
       </div>
       {/* <div className="h-dvh w-screen mt-3" id="clip">
@@ -61,6 +67,29 @@ const About = () => {
         </div>
       </div> */}
     </div>
+    <Dialog
+        open={open}
+        onOpenChange={setopen}
+      >
+        <DialogPortal>
+          <DialogOverlay className="bg-black/80" />
+          <DialogContent className="border-none bg-transparent shadow-none max-w-[90vw] max-h-[90vh]">
+           
+              <div className="relative group">
+                <img
+                  src={'/partners@3x.png'}
+                  alt={`Selected portfolio item`}
+                  className="w-full h-full object-contain rounded-lg"
+                  style={{ maxHeight: "90vh" }}
+                />
+                
+              </div>
+            
+          </DialogContent>
+        </DialogPortal>
+      </Dialog>
+    </>
+
   );
 };
 

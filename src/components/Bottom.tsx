@@ -30,7 +30,7 @@ console.log(socialLinks);
 
 const Bottom = () => {
   return (
-    <div className="flex flex-col items-center justify-around w-full md:flex-row gap-4 min-h-18 mb-3 mt-5 md:mt-1">
+    <div id="contact-us" className="flex flex-col items-center justify-around w-full md:flex-row gap-4 min-h-18 mb-3 mt-5 md:mt-1">
       <div className="flex items-center justify-center gap-2">
         <img
           src="rectangle-196@2x.png"

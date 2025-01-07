@@ -13,7 +13,7 @@ const SparkleButton = ({
     <button
       className={`
         group
-        relative flex items-center gap-2 px-4 md:px-8 py-2 md:py-4
+        relative flex items-center gap-2 px-2  md:px-8 py-2 md:py-4
         cursor-pointer bg-transparent border-none rounded-full
         transform origin-center transition-transform duration-300 ease-in-out
         hover:scale-110 active:scale-100
@@ -66,7 +66,7 @@ const SparkleButton = ({
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        className="relative w-7 z-10"
+        className="relative w-5 z-10"
       >
         <path
           className="fill-current stroke-current origin-center animate-[path_1.5s_linear_0.5s_infinite] group-hover:scale-120"
@@ -91,7 +91,7 @@ const SparkleButton = ({
       {/* Button Text */}
       <span
         className="
-        relative z-10 text-base
+        relative z-10 text-[13px] md:text-base
         
         text-white
         transition-[background-position] duration-300
