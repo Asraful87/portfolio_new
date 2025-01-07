@@ -7,10 +7,10 @@ const MemberCard = ({img,name,role}:{
 }) => {
   return (
     <div className=' items-center justify-start w-[300px] h-[100px] gap-4 member_card_gradient rounded-l-full rounded-r-full hidden md:flex'>
-        <img src={img} alt="" className='size-20 rounded-full'/>
+        <img src={img} alt="" className='size-20 rounded-full object-cover'/>
         <div className='flex flex-col gap-1 '>
-            <p className='text-sm font-semibold '>{name}</p>
-            <p className='text-sm font-semibold'>{role}</p>
+            <p className='text-sm font-semibold sour-gummy'>{name}</p>
+            <p className='text-sm font-semibold bangers-regular'>{role}</p>
         </div>
     </div>
   )

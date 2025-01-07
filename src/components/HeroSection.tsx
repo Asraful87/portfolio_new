@@ -7,19 +7,19 @@ export type HeroSectionType = {
 };
 const teamMembers = [
   {
-    img: "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80",
-    name: "Asraful Islam",
+    img: "/Asraful.jpg",
+    name: "ASHRAFUL ALAM",
     role: "CEO",
   },
   {
     img: "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80",
-    name: "Asraful Islam",
-    role: "CEO",
+    name: "YASIN ARAFAT",
+    role: "COO",
   },
   {
-    img: "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80",
-    name: "Asraful Islam",
-    role: "CEO",
+    img: "/firoj.jpg",
+    name: "NAEEM HAQUE",
+    role: "Manager",
   },
 ]
 const HeroSection: FunctionComponent<HeroSectionType> = ({
