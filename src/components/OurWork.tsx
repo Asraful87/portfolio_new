@@ -30,16 +30,16 @@ interface ImageItem {
 }
 
 const images: ImageItem[] = [
-  { src: "/reviews/1.png", title: "Project 1" },
-  { src: "/reviews/2.png", title: "Project 2" },
-  { src: "/reviews/3.png", title: "Project 3" },
-  { src: "/reviews/4.png", title: "Project 4" },
-  { src: "/reviews/5.png", title: "Project 5" },
-  { src: "/reviews/6.png", title: "Project 6" },
-  { src: "/reviews/7.png", title: "Project 7" },
-  { src: "/reviews/8.png", title: "Project 8" },
-  { src: "/reviews/9.png", title: "Project 9" },
-  { src: "/reviews/10.png", title: "Project 10" },
+  { src: "/reviews/1.png", title: "Giveaway" },
+  { src: "/reviews/2.png", title: "Announcing post" },
+  { src: "/reviews/3.png", title: "Ambassador" },
+  { src: "/reviews/4.png", title: "Ambassador" },
+  { src: "/reviews/5.png", title: "Giveaway" },
+  { src: "/reviews/6.png", title: "Gievaway+Ambassador" },
+  { src: "/reviews/7.png", title: "Ambassador" },
+  { src: "/reviews/8.png", title: "Ambassador" },
+  { src: "/reviews/9.png", title: "Gievaway" },
+  { src: "/reviews/10.png", title: "Gievaway" },
 ];
 
 const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
@@ -102,6 +102,14 @@ const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
       <p className="w-full text-lg leading-[32px] font-medium text-gray-500 text-center inline-block mb-8">
         A glimpse of our portfolio
       </p>
+      <div className="w-full flex flex-col items-center justify-center gap-2">
+      <p className="w-full text-lg font-medium  text-center inline-block mb-8">
+        With
+      </p>
+      <p className="w-full text-lg md:text-xl font-bold text-center inline-block mb-8">
+        MultiversX 50% , SOLANA 30%, and XRP 20% / REST Others
+      </p>
+      </div>
 
       <div
         ref={scrollContainerRef}
@@ -112,7 +120,7 @@ const OurWork: FunctionComponent<OurWorkType> = ({ className = "" }) => {
             key={index}
             className="flex flex-col items-center w-[200px] flex-shrink-0 snap-start"
           >
-            <div className="text-sm font-medium text-gray-700 mb-2 text-center h-8 flex items-center justify-center">
+            <div className="text-sm font-bold text-gray-700 mb-2 text-center h-8 flex items-center justify-center">
               {item.title}
             </div>
             <button
