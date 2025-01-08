@@ -3,7 +3,7 @@ import { PricingCard } from "./PricingCard";
 const PricingCards: React.FC = () => {
   const starterFeatures = [
     "Trending Dashboard",
-    "Up to 5 Hundreed Active user",
+    "Up to 5 Hundred Active user",
     " Upcoming 5 Tweet Supoort",
     "Basic Support",
     "24 Hour Runtime",
@@ -11,7 +11,7 @@ const PricingCards: React.FC = () => {
 
   const proFeatures = [
     "Trending Dashboard",
-    "Up to 7 Hundreed Active user",
+    "Up to 7 Hundred Active user",
    " Upcoming 5 Tweet Supoort Like + RT",
     "24/7 Help Center & Support For Your Any Question",
     "Premium Support",
@@ -23,7 +23,9 @@ const PricingCards: React.FC = () => {
    " Upcoming All Tweet Like+Repost",
     "24/7 Help Center & Support For Your Any Question",
     "Available to change PP (extra charges apply)",
+    "Posting Tweets frequently about your project",
     "Premium Support",
+
   ];
 
   return (
