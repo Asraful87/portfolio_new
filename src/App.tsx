@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import {
   Routes,
   Route,
@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
+import Loader from "./components/Loader";
 
 function App() {
   const action = useNavigationType();
@@ -44,9 +45,17 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-    </Routes>
+    <Suspense
+      fallback={
+        <div className="w-full h-screen flex items-center justify-center">
+          <Loader />
+        </div>
+      }
+    >
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </Suspense>
   );
 }
 export default App;

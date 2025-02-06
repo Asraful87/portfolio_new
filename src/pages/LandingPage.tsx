@@ -1,4 +1,4 @@
-import { FunctionComponent, useRef } from "react";
+import { FunctionComponent, Suspense, useRef } from "react";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
@@ -9,26 +9,34 @@ import Bottom from "../components/Bottom";
 import PricingSection from "@/components/PricingSection";
 import About from "@/components/About";
 import Statitistic from "@/components/Statitistic";
+import Loader from "@/components/Loader";
 
 const LandingPage: FunctionComponent = () => {
-  
   return (
     <div className="scroll-smooth relative bg-white w-screen  overflow-x-hidden flex flex-col items-center justify-start  text-45xl text-gray-300 font-general-sans-variable">
-      <NavBar/>
+      <NavBar />
       <HeroSection />
-      <About />
-      <Statitistic />
-      <HowItWorks />
-      <OurWork />
-      <PricingSection />
-      <img
-        src="/banner.png"
-        alt="Banner"
-        className="w-full md:container mx-auto cover mt-7 rounded-lg"
-      />
+      <Suspense
+        fallback={
+          <div className="w-full h-96 flex items-center justify-center">
+            <Loader />
+          </div>
+        }
+      >
+        <About />
+        <Statitistic />
+        <HowItWorks />
+        <OurWork />
+        <PricingSection />
+        <img
+          src="/banner.png"
+          alt="Banner"
+          className="w-full md:container mx-auto cover mt-7 rounded-lg"
+        />
 
-      <Help />
-      <Bottom />
+        <Help />
+        <Bottom />
+      </Suspense>
       <footer className="w-full bg-black h-20 text-sm text-white">
         <div className="container mx-auto h-full px-4">
           <div className="h-full flex items-center justify-between">

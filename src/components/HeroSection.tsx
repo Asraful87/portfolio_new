@@ -12,7 +12,7 @@ const teamMembers = [
     role: "CEO",
   },
   {
-    img: "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=76&q=80",
+    img: "/Yeasin.jpg",
     name: "YASIN ARAFAT",
     role: "COO",
   },
@@ -21,7 +21,7 @@ const teamMembers = [
     name: "NAEEM HAQUE",
     role: "Manager",
   },
-]
+];
 const HeroSection: FunctionComponent<HeroSectionType> = ({
   className = "",
 }) => {
@@ -65,20 +65,31 @@ const HeroSection: FunctionComponent<HeroSectionType> = ({
               </div>
             </div>
           </div>
-         
         </div>
 
         <div className="flex flex-col items-center justify-center gap-4">
-          <h1 className="text-[30px] md:text-5xl lg:text-[50px] leading-tight capitalize  text-white text-center md:text-left mt-5">Our Team</h1>
-           <div className="flex items-center justify-center md:justify-around gap-12 flex-wrap mt-10">
-           {teamMembers.map((member, index) => (
-            <MemberCard key={index} img={member.img} name={member.name} role={member.role}/>
-           ))}
+          <h1 className="text-[30px] md:text-5xl lg:text-[50px] leading-tight capitalize  text-white text-center md:text-left mt-5">
+            Our Team
+          </h1>
+          <div className="flex items-center justify-center md:justify-around gap-12 flex-wrap mt-10">
             {teamMembers.map((member, index) => (
-            <MobileMemberCard key={index} img={member.img} name={member.name} role={member.role}/>
+              <MemberCard
+                key={index}
+                img={member.img}
+                name={member.name}
+                role={member.role}
+              />
             ))}
-           </div>
+            {teamMembers.map((member, index) => (
+              <MobileMemberCard
+                key={index}
+                img={member.img}
+                name={member.name}
+                role={member.role}
+              />
+            ))}
           </div>
+        </div>
       </div>
     </section>
   );
